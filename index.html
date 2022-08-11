@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>Emocion a emoji</h1>
+        <h2>Toma tu foto para generar un emoji</h2>
+        <h2 id="pregunta1">Estas feliz</h2>
+        <h2 id="pregunta2">Estas triste</h2>
+        <h2 id="pregunta3">Estas enojado</h2>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h1>Vista de la camara web</h1>
+            <div id="mesirve"></div>
+            <button onclick="tomarfoto()" id="tomarfoto">Tomar foto</button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h1>Predicion 1</h1>
+            <h1 id="emocion1"></h1>
+            <h1 id="salidaemoji1"></h1>
+            <h1>Predicion 2</h1>
+            <h1 id="emocion2"></h1>
+            <h1 id="salidaemoji2"></h1>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+            <h1>Salida final</h1>
+            <div id="resultado"></div>
+            <br>
+            <button id="identificar" onclick="identificar()">Predecir emocion</button>
+        </div>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>
